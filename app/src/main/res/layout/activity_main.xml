@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:background="#D2B67A"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#D2B67A">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center|left"
+                    android:text="@string/_2048"
+                    android:textColor="@color/black"
+                    android:textSize="66sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.35"
+                android:background="#D2B67A"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:ignore="NestedWeights">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_tab"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/step"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_tab"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="@string/_0"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="12dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_tab"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/bestScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonReload"
+                        android:layout_width="136dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginVertical="16sp"
+                        android:background="@drawable/background_tab"
+                        android:backgroundTint="#8F7A66"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="New Game"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--            <androidx.appcompat.widget.AppCompatButton-->
+            <!--                android:id="@+id/buttonReload"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="8dp"-->
+            <!--                android:padding="8dp" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/background_tab"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                style="@style/PlayButton"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                tools:text="0" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
